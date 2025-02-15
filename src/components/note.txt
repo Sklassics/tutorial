@@ -1,0 +1,57 @@
+ <div
+        ref={subRef1}
+        className={`main-box ${inView1 ? "visible" : ""}`} // Fixed class assignment
+        data-direction="bottom"
+      >
+
+
+       const { ref: subRef1, inView: inView1 } = useInView({
+    triggerOnce: true,
+    threshold: 0.1, // Adjust this threshold if necessary
+  });
+
+
+  import { useInView } from "react-intersection-observer";
+  \
+
+  css  -
+
+
+
+  .main-box {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative;
+  height: auto;
+  background-image: url("./assets/tyhb_12.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.main-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    {/* <div className="carousel" id="home">
+      <div className="carousel-inner">
+        <img
+          src={images[currentIndex]}
+          alt={`Slide ${currentIndex}`}
+          className="carousel-image"
+          style={{borderRadius:"20px"}}
+        />
+      </div>
+      <button className="carousel-control prev" onClick={goToPrev}>
+        &#10094;
+      </button>
+      <button className="carousel-control next" onClick={goToNext}>
+        &#10095;
+      </button>
+    </div> */}

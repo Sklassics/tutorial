@@ -1,0 +1,127 @@
+.slider-container {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 90vw;
+  max-width: 800px;
+  position: relative;
+  height: 220px; /* Adjusted height to fit two reviews */
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center; /* Center align items vertically */
+}
+
+.slide {
+  flex-shrink: 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Each slide takes up half the container */
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.name {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #8b5cf6;
+}
+
+.title-review {
+  margin-bottom: 1rem;
+  color: #334155;
+  font-size: 0.85rem; /* Font size adjusted for better readability */
+}
+
+.person-img {
+  width: 100px; /* Responsive image width */
+  height: 100px; /* Responsive image height */
+  border-radius: 50%;
+  border: 4px solid #ddd6fe;
+  object-fit: cover;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 80%; /* Positioned towards the bottom */
+  background: #64748b;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border: none; /* Removed border */
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+}
+
+.prev:hover,
+.next:hover {
+  background: #8b5cf6;
+}
+
+.prev {
+  left: 1rem; /* Positioned to the left */
+}
+
+.next {
+  right: 1rem; /* Positioned to the right */
+}
+
+/* Media queries for responsiveness */
+
+@media (min-width: 1350px) {
+  .slider-container {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  
+
+  .slide {
+    width: 100%; /* Full width for smaller devices */
+  }
+
+  .person-img {
+    width: 75px;
+    height: 75px; /* Smaller image size for mobile */
+  }
+
+  .name {
+    font-size: 1rem; /* Responsive font size */
+  }
+
+  .title-review {
+    font-size: 0.75rem; /* Responsive font size */
+  }
+
+  .prev,
+  .next {
+    width: 1.5rem;
+    height: 1.5rem; /* Smaller navigation buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    margin-top: 2rem;
+  }
+
+  .person-img {
+    width: 50px;
+    height: 50px; /* Even smaller image size for mobile */
+  }
+
+  .name {
+    font-size: 0.9rem; /* Further reduced font size */
+  }
+
+  .title-review {
+    font-size: 0.65rem; /* Further reduced font size */
+  }
+}
