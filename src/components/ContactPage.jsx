@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 // import Socialmedia from "./Socialmedia";
@@ -171,12 +172,12 @@ const ContactPage = () => {
                       />
 
                       <h3>Contact Number</h3>
-                      <p>+91 6304889220</p>
+                      <p>+91 6305490580</p>
                     </a>
                   </div>
                   <div className="cnt-col">
                     <a
-                      href="mailto:asiklucky5@gmail.com"
+                      href="mailto:pk5059407@gmail.com"
                       style={{ textDecoration: "none" }}
                       target="_blank"
                     >
